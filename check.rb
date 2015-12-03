@@ -34,7 +34,7 @@ end
 # The verify credentials endpoint returns a 200 status if
 # the request is signed correctly.
 #address = URI("#{baseurl}/1.1/account/verify_credentials.json")
-address = URI("#{baseurl}/1.1/search/tweets.json?q=helpchennai&count=100")
+address = URI("#{baseurl}/1.1/search/tweets.json?q=%23helpchennai%20OR%20%23chennaifloods%20OR%20%23chennairains%20OR%20%23chennairainshelp&count=100")
 
 # Set up Net::HTTP to use SSL, which is required by Twitter.
 http = Net::HTTP.new address.host, address.port
