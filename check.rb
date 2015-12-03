@@ -17,10 +17,10 @@ access_token = OAuth::Token.new(
 baseurl = "https://api.twitter.com"
 
 def print_timeline(tweets)
-  file = File.open('chennai.txt', 'w')
+  file = File.open('index.html', 'w')
   tweets['statuses'].each do |tweet|
     puts tweet["text"]
-    file.puts(tweet["text"] + "\n")
+    file.puts("<h3>" + tweet["text"] + "</h3>")
   end
 end
 
